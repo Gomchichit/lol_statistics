@@ -39,8 +39,6 @@ def _crawl_opgg_keywords(text):
 '''
     for data in soup1.find_all("div", class_="champion-index-table__name"):
         if not data.get_text() in keywords:
-
-
     for data in soup.find_all("p", class_="artist"):
         if not data.get_text() in keywords:
             if len(singer) >= 10:
@@ -49,7 +47,6 @@ def _crawl_opgg_keywords(text):
     for i in range(len(titles)):
         keywords.append(str(i + 1) + "위: " + titles[i] + "/" + singer[i])
     # 한글 지원을 위해 앞에 unicode u를 붙혀준다.
-
     return u'\n'.join(keywords)
 '''
 a = _crawl_opgg_keywords('aa')
